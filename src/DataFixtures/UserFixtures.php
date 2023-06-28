@@ -15,7 +15,7 @@ class UserFixtures extends Fixture
     {
         $this->passwordHasher = $passwordHasher;
     }
-    
+
     public function load(ObjectManager $manager): void
     {
         $user = new User();
