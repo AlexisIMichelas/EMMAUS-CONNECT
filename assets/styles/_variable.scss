@@ -1,0 +1,22 @@
+$blue : #1a2c7c;
+$white : #FFFF;
+$red :   #e62347;
+$sky-blue : #09b8ee;
+$yellow: #fed857;
+$blue-night: #201b4e;
+
+$primary: $blue;
+$primary-inverse:$sky-blue;
+$secondary:$red;
+$secondaire-inverse:$white;
+$tertiaire: $blue-night;
+$tertiaire-inverse: $yellow;
+
+$theme-colors: (
+    "primary": $primary,
+    "primary-inverse": $primary-inverse,
+    "secondary": $secondary,
+    "secondary-inverse": $white,
+    "tertiaire": $tertiaire,
+    "tertiaire-inverse": $tertiaire-inverse
+);
