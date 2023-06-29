@@ -10,19 +10,17 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-
 class CharacterType extends AbstractType
 {
-
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('IMEI')
-            ->add('Marque')
-            ->add('Modele')
-            ->add('RAM')
-            ->add('Antutu')
-            ->add('Ponderation');
+            ->add('imei')
+            ->add('marque')
+            ->add('modele')
+            ->add('ram')
+            ->add('antutu')
+            ->add('ponderation');
     }
 
     public function configureOptions(OptionsResolver $resolver): void
@@ -31,6 +29,4 @@ class CharacterType extends AbstractType
             'data_class' => Character::class,
         ]);
     }
-
-
 }

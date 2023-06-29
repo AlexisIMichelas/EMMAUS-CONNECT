@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\CharacterRepository;
 use Doctrine\ORM\Mapping as ORM;
+
 #[ORM\Entity(repositoryClass: CharacterRepository::class)]
 #[ORM\Table(name: '`character`')]
 class Character
@@ -14,96 +15,96 @@ class Character
     private ?int $id = null;
 
     #[ORM\Column]
-    private ?int $IMEI = null;
+    private ?int $imei = null;
 
     #[ORM\Column(length: 50)]
-    private ?string $Marque = null;
+    private ?string $marque = null;
 
     #[ORM\Column(length: 50)]
-    private ?string $Modele = null;
+    private ?string $modele = null;
 
     #[ORM\Column]
-    private ?int $RAM = null;
+    private ?int $ram = null;
 
     #[ORM\Column]
-    private ?int $Antutu = null;
+    private ?int $antutu = null;
 
     #[ORM\Column]
-    private ?int $Ponderation = null;
+    private ?int $ponderation = null;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getIMEI(): ?int
+    public function getImei(): ?int
     {
-        return $this->IMEI;
+        return $this->imei;
     }
 
-    public function setIMEI(int $IMEI): self
+    public function setImei(int $imei): self
     {
-        $this->IMEI = $IMEI;
+        $this->imei = $imei;
 
         return $this;
     }
 
     public function getMarque(): ?string
     {
-        return $this->Marque;
+        return $this->marque;
     }
 
-    public function setMarque(string $Marque): self
+    public function setMarque(string $marque): self
     {
-        $this->Marque = $Marque;
+        $this->marque = $marque;
 
         return $this;
     }
 
     public function getModele(): ?string
     {
-        return $this->Modele;
+        return $this->modele;
     }
 
-    public function setModele(string $Modele): self
+    public function setModele(string $modele): self
     {
-        $this->Modele = $Modele;
+        $this->modele = $modele;
 
         return $this;
     }
 
-    public function getRAM(): ?int
+    public function getRam(): ?int
     {
-        return $this->RAM;
+        return $this->ram;
     }
 
-    public function setRAM(int $RAM): self
+    public function setRam(int $ram): self
     {
-        $this->RAM = $RAM;
+        $this->ram = $ram;
 
         return $this;
     }
 
     public function getAntutu(): ?int
     {
-        return $this->Antutu;
+        return $this->antutu;
     }
 
-    public function setAntutu(int $Antutu): self
+    public function setAntutu(int $antutu): self
     {
-        $this->Antutu = $Antutu;
+        $this->antutu = $antutu;
 
         return $this;
     }
 
     public function getPonderation(): ?int
     {
-        return $this->Ponderation;
+        return $this->ponderation;
     }
 
-    public function setPonderation(int $Ponderation): self
+    public function setPonderation(int $ponderation): self
     {
-        $this->Ponderation = $Ponderation;
+        $this->ponderation = $ponderation;
 
         return $this;
     }
