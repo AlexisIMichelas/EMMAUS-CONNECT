@@ -24,17 +24,16 @@
 		{% block nav %}
 			{# {% include 'include/_navbar.html.twig' %} #}
 		{% endblock %}
-		<main>
-			{% block body %}{% endblock %}
-		</main>
 
-	<footer class="fixed-bottom">
-    <hr class="footer-line bg-secondary border-3">
-    <div class="d-flex justify-content-between">
-        <img src="{{ asset('build/images/logo.png') }}" alt="" class="align-self-end">
-        <img src="{{ asset('build/images/slogan.PNG') }}" alt="" class="align-self-end">
-    </div>
-</footer>
+			{% block body %}
+            {% endblock %}
+
+
+        <footer>
+			 {% include 'include/_footer.html.twig' %}
+		</footer>
+
+
 
 	</body>
 </html>
