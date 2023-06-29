@@ -11,13 +11,13 @@
 <hr class="w-50 mx-auto mb-3 opacity-100 mt-1 border-2">
 <div class="col-lg-2 offset-lg-5  border border-2 border-dark p-4 rounded">
 {{ form_start(form) }}
-  {{ form_row(form.Modele) }}
-  {{ form_row(form.Marque) }}
-  {{ form_row(form.IMEI) }}
-  {{ form_row(form.RAM) }}
-{{ form_row(form.Antutu) }}
-{{ form_row(form.Ponderation) }}
+  {{ form_row(form.modele) }}
+  {{ form_row(form.marque) }}
+  {{ form_row(form.imei) }}
+  {{ form_row(form.ram) }}
+{{ form_row(form.antutu) }}
+{{ form_row(form.ponderation) }}
 </div>
-  <button class="btn btn-primary col-lg-1 offset-lg-4 mt-3 mb-3">{{ button_label|default('Valider') }}</button>
+  <button class="btn btn-primary col-lg-2 offset-lg-5 mt-3 mb-3">{{ button_label|default('Valider') }}</button>
 {{ form_end(form) }}
 {% endblock %}
