@@ -8,11 +8,11 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class LaundingController extends AbstractController
 {
-    #[Route('/launding', name: 'app_launding')]
+    #[Route('/', name: 'app_launding')]
     public function index(): Response
     {
         return $this->render('launding/index.html.twig', [
-            'controller_name' => 'LaundingController',
+            'controller_name' => 'laundingController',
         ]);
     }
 }
