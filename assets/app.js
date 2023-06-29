@@ -9,5 +9,8 @@
 import './styles/app.scss';
 
 // start the Stimulus application
+
+
+import './search';
 import './bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
