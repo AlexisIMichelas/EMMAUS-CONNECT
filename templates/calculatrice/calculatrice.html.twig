@@ -2,7 +2,11 @@
 
 {% block body %}
 <div class="container">
-<h2 class="text-center mt-4">Calculatrice</h2>
+
+<div class="offset-lg-4">
+			<h2 class="title container-fluid bg-secondary text-white border border-tertiaire-inverse mb-5">ACCUEIL</h2>
+		</div>
+
 <form method="POST" action="{{ path('app_calculatrice') }}">
 <div class="form-group">
 <label for="phoneRam">RAM du téléphone:</label>
@@ -47,7 +51,7 @@
 </div>
 <button type="submit" class="btn btn-primary">Calculer</button>
 </form>
-    {% if finalPrice is defined %}
+    {# {% if finalPrice is defined %}
         <div class="container mt-4">
             <h4>Résultats du calcul :</h4>
             <p>Score RAM: {{ ramScore }}</p>
@@ -56,7 +60,7 @@
             <p>Pondération: {{ ponderation }}%</p>
             <p>Prix final: {{ finalPrice }} €</p>
         </div>
-    {% endif %}
+    {% endif %} #}
 </div>
 {% endblock %}
 
