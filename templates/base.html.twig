@@ -19,6 +19,7 @@
 			{{ encore_entry_script_tags('app') }}
 		{% endblock %}
 	</head>
+
 	<body class"min-vh-100 d-flex flex-column">
 		{% for label. messages in app.flashes %}
 			{% for message in messages %}
@@ -33,12 +34,10 @@
 				{% block body %}{% endblock %}
 
 
+
 				<footer>
 					{% include 'include/_footer.html.twig' %}
 				</footer>
 
-
-			</body>
-		</html>
 	</body>
 </html>
