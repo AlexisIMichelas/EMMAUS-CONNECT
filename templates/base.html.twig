@@ -21,23 +21,14 @@
 	</head>
 
 	<body class"min-vh-100 d-flex flex-column">
-		{% for label. messages in app.flashes %}
-			{% for message in messages %}
-				<div class="alert alert-{{ label }}">
-					{{ message }}
-				</div>
+		{% block nav %}
+			{# {% include 'include/_navbar.html.twig' %} #}
+		{% endblock %}
 
-				{% block nav %}
-					{# {% include 'include/_navbar.html.twig' %} #}
-				{% endblock %}
+		{% block body %}{% endblock %}
 
-				{% block body %}{% endblock %}
-
-
-
-				<footer>
-					{% include 'include/_footer.html.twig' %}
-				</footer>
-
+		<footer>
+			{% include 'include/_footer.html.twig' %}
+		</footer>
 	</body>
 </html>
