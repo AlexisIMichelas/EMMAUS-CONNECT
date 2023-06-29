@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container">
+<h2 class="text-center mt-4">Calculatrice</h2>
+<form method="POST" action="{{ path('app_calculatrice') }}">
+<div class="form-group">
+<label for="phoneRam">RAM du téléphone:</label>
+<select class="form-control" id="phoneRam" name="phoneRam">
+<option value="1">1 Go</option>
+<option value="2">2 Go</option>
+<option value="3">3 Go</option>
+<option value="4">4 Go</option>
+<option value="6">6 Go</option>
+<option value="8">8 Go</option>
+<option value="12">12 Go</option>
+<option value="16">16 Go et plus</option>
+</select>
+</div>
+<div class="form-group">
+<label for="phoneStorage">Stockage du téléphone:</label>
+<select class="form-control" id="phoneStorage" name="phoneStorage">
+<option value="16">16 Go</option>
+<option value="32">32 Go</option>
+<option value="64">64 Go</option>
+<option value="128">128 Go</option>
+<option value="256">256 Go</option>
+<option value="512">512 Go</option>
+<option value="1024">1 To et plus</option>
+</select>
+</div>
+<div class="form-group">
+<label for="phoneAntutu">Score Antutu du téléphone:</label>
+<input type="number" class="form-control" id="phoneAntutu" name="phoneAntutu" min="0">
+</div>
+<div class="form-group">
+<label for="phoneStatus">État du téléphone:</label>
+<select class="form-control" id="phoneStatus" name="phoneStatus">
+<option value="DEEE">DEEE</option>
+<option value="REPARABLE">Réparable</option>
+<option value="BLOQUE">Bloqué</option>
+<option value="RECONDITIONABLE">Reconditionnable</option>
+<option value="RECONDITIONNE">Reconditionné</option>
+<option value="BON ETAT">Bon état</option>
+<option value="TRES BON ETAT">Très bon état</option>
+</select>
+</div>
+<button type="submit" class="btn btn-primary">Calculer</button>
+</form>
+    {% if finalPrice is defined %}
+        <div class="container mt-4">
+            <h4>Résultats du calcul :</h4>
+            <p>Score RAM: {{ ramScore }}</p>
+            <p>Score mémoire: {{ storageScore }}</p>
+            <p>Score Antutu: {{ antutuScore }}</p>
+            <p>Pondération: {{ ponderation }}%</p>
+            <p>Prix final: {{ finalPrice }} €</p>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
+
