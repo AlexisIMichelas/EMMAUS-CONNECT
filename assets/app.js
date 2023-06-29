@@ -13,4 +13,3 @@ import './styles/app.scss';
 
 // import './search';
 import './bootstrap';
-import 'bootstrap-icons/font/bootstrap-icons.css';
