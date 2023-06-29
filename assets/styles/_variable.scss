@@ -1,13 +1,15 @@
-$blue : #00A6AA;
+$blue : #2600ffdf;
 $white : #FFFF;
+$grey :   #dfd7d7cd;
+$sky-blue : #00a6aa;
 $red :   #ec4664;
 $yellow: #f5c939;
 $orange: #fe8957;
 $blue-night: #201b4e;
 
-$primary: $blue;
+$primary:$blue-night;
 $primary-inverse:$yellow;
-$secondary:$red;
+$secondary:$grey;
 $secondaire-inverse:$white;
 $tertiaire: $blue-night;
 $tertiaire-inverse: $orange;

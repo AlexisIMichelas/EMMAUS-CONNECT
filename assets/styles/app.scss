@@ -1,6 +1,7 @@
 //start coding by removing this file and adding yours ;)
 
-@import "variable";
 @import "~bootstrap/scss/bootstrap";
+@import "variable";
+@import "_variable.scss";
 @import "error404";
 @import "connexion";
