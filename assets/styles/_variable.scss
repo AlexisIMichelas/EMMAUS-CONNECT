@@ -1,9 +1,11 @@
-$blue : #00A6AA;
-$white : #FFFF;
-$red :   #e62347;
-$yellow: #f5c939;
-$orange: #fe8957;
-$blue-night: #201b4e;
+$blue : #00a6aa;
+$pink : #ec4664;
+$white : #FFFFFF;
+$yellow : #f5c939;
+$grey : #cccbd1df;
+$orange : #fe8957;
+$blue-night :#201b4e ;
+
 
 $primary: $blue;
 $primary-inverse:$yellow;
@@ -13,11 +15,12 @@ $tertiary: $blue-night;
 $tertiary-inverse: $orange;
 
 
+
 $theme-colors: (
     "primary": $primary,
-    "primary-inverse": $primary-inverse,
+    "primary-inverse": $grey,
     "secondary": $secondary,
-    "secondary-inverse": $white,
+    "secondary-inverse": $secondary-inverse,
     "tertiary": $tertiary,
-    "tertiary-inverse": $tertiary-inverse
+    "tertiary-inverse": $tertiary-inverse,
 );

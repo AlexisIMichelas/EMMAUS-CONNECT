@@ -1,10 +1,8 @@
 {% extends 'base.html.twig' %}
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
 
 {% block title %}Questionnaire
 {% endblock %}
 
 {% block body %}
-{{ form_start(form) }}
-   {{ form_widget(form) }}
-   <button class="btn">{{ button_label|default('Save') }}</button>
-{{ form_end(form) }}
+<h2> votre appareil a bien eté enregistrer</h2>
