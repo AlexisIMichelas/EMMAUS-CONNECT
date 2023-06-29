@@ -15,17 +15,37 @@
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
-    {% block nav %}
-        {% include 'include/_navbar.html.twig' %}
-    {% endblock %}
-    <body>
+		{% block javascripts %}
+			{{ encore_entry_script_tags('app') }}
+		{% endblock %}
+	</head>
+
+	<body class"min-vh-100 d-flex flex-column">
+    {% if app.user %}
+            {{ app.user.email }}
+            <a href="{{ path('app_logout') }}"> Se déconnecter</a>
+        {% else %}
+            <a href="{{ path('app_login') }}"> Se connecter</a>
+        {% endif %}
+
         {% block body %}{% endblock %}
-        <footer>
-            {% include 'include/_footer.html.twig' %}
-        </footer>
-    </body>
+		{% for label. messages in app.flashes %}
+			{% for message in messages %}
+				<div class="alert alert-{{ label }}">
+					{{ message }}
+				</div>
+
+				{% block nav %}
+					{# {% include 'include/_navbar.html.twig' %} #}
+				{% endblock %}
+
+				{% block body %}{% endblock %}
+
+
+
+				<footer>
+					{% include 'include/_footer.html.twig' %}
+				</footer>
+
+	</body>
 </html>
