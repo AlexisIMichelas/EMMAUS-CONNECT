@@ -21,6 +21,14 @@
 	</head>
 
 	<body class"min-vh-100 d-flex flex-column">
+    {% if app.user %}
+            {{ app.user.email }}
+            <a href="{{ path('app_logout') }}"> Se déconnecter</a>
+        {% else %}
+            <a href="{{ path('app_login') }}"> Se connecter</a>
+        {% endif %}
+
+        {% block body %}{% endblock %}
 		{% for label. messages in app.flashes %}
 			{% for message in messages %}
 				<div class="alert alert-{{ label }}">
