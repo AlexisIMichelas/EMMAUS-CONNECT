@@ -1,8 +1,28 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Welcome{% endblock %}
-
-{% block body %}
-<h1 class="d-flex justify-content-center">coucou</h1>
+{% block title %}Accueil
 {% endblock %}
 
+{% block body %}
+	<div class="row d-flex">
+		<div class="offset-lg-4">
+			<h2 class="title container-fluid bg-secondary text-white border border-tertiaire-inverse mb-5">ACCUEIL</h2>
+		</div>
+
+		<div class="d-flex flex-column bd-highlight mb-3">
+
+			<a href="#" class="p-2 bd-highlight col-md-5 btn btn-tertiary btn-md btn-block text-white mt-4">Nouvel appareil</a>
+
+			<a href="#" class="p-2 bd-highlight col-md-5 btn btn-tertiary btn-md btn-block text-white mt-4">Base de données</a>
+
+			<a href="{{path('app_faq')}}" class="col-md-5 btn btn-tertiary btn-md btn-block text-white mt-4">FAQ</a>
+
+		</div>
+		<div class="container">
+
+			<img src="{{ asset('build/images/smartphone-accueil.jpg') }}" alt="" class="img-fluid rounded-3 m-5" style="height:300px">
+
+        </div>
+	</div>
+
+{% endblock %}
