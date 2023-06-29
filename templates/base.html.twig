@@ -23,20 +23,19 @@
 	<body class"min-vh-100 d-flex flex-column">
     {% if app.user %}
             {{ app.user.email }}
-            <a href="{{ path('app_logout') }}"> Se déconnecter</a>
+            <a href="{{ path('app_logout') }}">Se déconnecter</a>
         {% else %}
-            <a href="{{ path('app_login') }}"> Se connecter</a>
+            <a href="{{ path('app_login') }}">Se connecter</a>
         {% endif %}
-
-        {% block body %}{% endblock %}
 
 				{% block nav %}
 					{% include 'include/_navbar.html.twig' %}
 				{% endblock %}
 
+        {% block body %}{% endblock %}
+
 				<footer>
 					{% include 'include/_footer.html.twig' %}
 				</footer>
-
 	</body>
 </html>
