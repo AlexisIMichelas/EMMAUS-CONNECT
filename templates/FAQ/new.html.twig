@@ -1,19 +1,25 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Faq{% endblock %}
+{% block title %}Créer une nouvelle question{% endblock %}
 
 {% block body %}
     <div class="container">
         <h1 class="bg-primary rounded text-white m-3 mb-5 p-3">Créer une nouvelle question</h1>
 
-        {#{{ include('faq/_form.html.twig', {'button_label': 'Créer'}) }}#}
         {{ form_start(form) }}
-            {{ form_row(form.title, { label: 'Titre' }) }}
-            {{ form_row(form.content, { label: 'Contenu' }) }}
+            <div class="form-group mb-2 ms-4 me-4">
+                {{ form_label(form.title, 'Titre') }}
+                {{ form_widget(form.title, {'attr': {'class': 'form-control'}}) }}
+            </div>
 
-            <button type="submit" class="btn btn-primary text-white">Register</button>
+            <div class="form-group ms-4 me-4">
+                {{ form_label(form.content, 'Contenu') }}
+                {{ form_widget(form.content, {'attr': {'class': 'form-control', 'rows': '20'}}) }}
+            </div>
+
+            <button type="submit" class="btn btn-primary text-white mt-3 ms-4">Créer</button>
         {{ form_end(form) }}
         <hr>
-        <a href="{{ path('app_faq_index') }}" class="btn btn-primary text-white m-3">Retour à la foire aux question</a>
+        <a href="{{ path('app_faq_index') }}" class="btn btn-primary text-white m-3">Retour à la foire aux questions</a>
     </div>
 {% endblock %}
