@@ -20,7 +20,6 @@ class UserFixtures extends Fixture
     {
         $user = new User();
         $user->setEmail('user@emmaus-connect.org');
-        $user->setRoles(['ROLE_USER']);
         $hashedPassword = $this->passwordHasher->hashPassword($user, 'user');
         $user->setPassword($hashedPassword);
         $manager->persist($user);
