@@ -10,7 +10,7 @@
             <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ faq.id) }}">
             <button class="btn btn-secondary text-white mt-3 ms-4">Supprimer</button>
         </form>
-        <hr>
+        <hr class="ms-4 me-4">
         <a href="{{ path('app_faq_index') }}" class="btn btn-primary text-white m-3">Retour à la foire aux questions</a><br>
     </div>
 {% endblock %}

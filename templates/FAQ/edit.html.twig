@@ -19,7 +19,7 @@
             <button type="submit" class="btn btn-primary text-white mt-3 ms-4">Modifier</button>
         {{ form_end(form) }}
         <a href="{{ path('app_faq_delete', {'id': faq.id}) }}" class="btn btn-secondary text-white mt-3 ms-4">Supprimer</a>
-        <hr>
+        <hr class="ms-4 me-4">
         <a href="{{ path('app_faq_index') }}" class="btn btn-primary text-white m-3">Retour à la foire aux questions</a><br>
     </div>
 {% endblock %}
