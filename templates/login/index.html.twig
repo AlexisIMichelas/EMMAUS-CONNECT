@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Connexion
+{% endblock %}
+
+{% block body %}
+	<div class="offset-lg-4">
+		<h2 class="title container-fluid bg-secondary text-white border border-tertiaire-inverse">CONNEXION</h2>
+	</div>
+
+	{% if error %}
+		<div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+	{% endif %}
+
+	<form class="col-lg-2 offset-lg-5 mt-4" action="{{ path('app_login') }}" method="post">
+		<div class="mb-4">
+			<label for="username" class="form-label">
+				<i class="bi-connexion bi-person fs-1"></i>
+			</label>
+			<div class="input-group has-validation">
+				<span class="input-group-text bg-primary text-white">@</span>
+				<input type="text" class="form-control" id="username" name="_username" value="{{ last_username }}" aria-describedby="Connexion">
+			</div>
+		</div>
+
+		<div class="mb-4">
+			<label for="password" class="form-label">
+				<i class="bi-connexion bi-key fs-1"></i>
+				<input type="password" class="form-control" id="password" name="_password">
+			</label>
+		</div>
+
+		<input type="hidden" name="_target_path" value="/">
+		<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+		<button type="submit" class="btn btn-tertiary rounded-4 text-white">Se connecter</button>
+	</form>
+{% endblock %}
