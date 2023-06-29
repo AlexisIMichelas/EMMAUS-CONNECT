@@ -14,7 +14,12 @@
                         </button>
                     </h2>
                     <div id="flush-collapse{{ i + 1 }}" class="accordion-collapse collapse" data-bs-parent="#faq-accordion">
-                        <div class="accordion-body">{{ faq.content }}</div>
+                        <div class="accordion-body text-justify">
+                            {{ faq.content }}<br>
+                            <div class="d-flex justify-content-end">
+                                <a href="{{ path('app_faq_edit', {'id': faq.id}) }}" class="mt-3 btn btn-primary text-white">Modifier ou supprimer cette question</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
