@@ -69,7 +69,7 @@ class FaqController extends AbstractController
     #[Route('/{id}', name: 'app_faq_delete', methods: ['POST'])]
     public function delete(Request $request, Faq $faq, FaqRepository $faqRepository): Response
     {
-        if ($this->isCsrfTokenValid('delete'.$faq->getId(), $request->request->get('_token'))) {
+        if ($this->isCsrfTokenValid('delete' . $faq->getId(), $request->request->get('_token'))) {
             $faqRepository->remove($faq, true);
         }
 
