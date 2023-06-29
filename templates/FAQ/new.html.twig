@@ -6,8 +6,14 @@
     <div class="container">
         <h1 class="bg-primary rounded text-white m-3 mb-5 p-3">Créer une nouvelle question</h1>
 
-        {{ include('faq/_form.html.twig') }}
+        {#{{ include('faq/_form.html.twig', {'button_label': 'Créer'}) }}#}
+        {{ form_start(form) }}
+            {{ form_row(form.title, { label: 'Titre' }) }}
+            {{ form_row(form.content, { label: 'Contenu' }) }}
 
+            <button type="submit" class="btn btn-primary text-white">Register</button>
+        {{ form_end(form) }}
+        <hr>
         <a href="{{ path('app_faq_index') }}" class="btn btn-primary text-white m-3">Retour à la foire aux question</a>
     </div>
 {% endblock %}

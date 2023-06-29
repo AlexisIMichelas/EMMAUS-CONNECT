@@ -13,3 +13,4 @@ import './bootstrap';
 
 // Chargement de bootstrap JS
 require('bootstrap');
+require('./faq.scss');
