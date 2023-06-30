@@ -22,22 +22,24 @@
 
 
 	<body class"min-vh-100 d-flex flex-column">
-    {% if app.user %}
-            {{ app.user.email }}
-            <a href="{{ path('app_logout') }}">Se déconnecter</a>
-        {% else %}
-            {# <a href="{{ path('app_login') }}">Se connecter</a> #}
+    	{% if app.user %}
+            <a href="{{ path('app_faq') }}" class="btn btn-primary text-white m-2">Foire aux questions</a>&nbsp;
+			{% if is_granted('ROLE_ADMIN') %}
+				<a href="{{ path('app_user_index') }}" class="btn btn-secondary text-white m-2">Gestion des utilisateurs</a>
+			{% endif %}
+			<a href="{{ path('app_logout') }}" class="btn btn-primary text-white m-2">Se déconnecter</a>
+		{% else %}
+            <a href="{{ path('app_login') }}" class="btn btn-primary text-white m-2">Se connecter</a>
         {% endif %}
 
-				{% block nav %}
-					{% include 'include/_navbar.html.twig' %}
-				{% endblock %}
+		{% block nav %}
+			{# {% include 'include/_navbar.html.twig' %} #}
+		{% endblock %}
 
-        {% block body %}{% endblock %}
+		{% block body %}{% endblock %}
 
-				<footer>
-					{% include 'include/_footer.html.twig' %}
-				</footer>
+		<footer>
+			{% include 'include/_footer.html.twig' %}
+		</footer>
 	</body>
 </html>
-
