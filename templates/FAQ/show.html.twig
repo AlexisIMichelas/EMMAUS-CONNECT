@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Supprimer une question{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="bg-primary rounded text-white m-3 mb-5 p-3">Modifier une question</h1>
+        <p class="ms-4">Titre : {{ faq.title }}</p>
+        <form method="post" action="{{ path('app_faq_delete', {'id': faq.id}) }}" onsubmit="return confirm('Êtes-vous sûr de vouloir supprimer cette question ?');">
+            <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ faq.id) }}">
+            <button class="btn btn-secondary text-white mt-3 ms-4">Supprimer</button>
+        </form>
+        <hr class="ms-4 me-4">
+        <a href="{{ path('app_faq_index') }}" class="btn btn-primary text-white m-3">Retour à la foire aux questions</a><br>
+    </div>
+{% endblock %}

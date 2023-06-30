@@ -8,12 +8,11 @@ $blue-night :#201b4e ;
 
 
 $primary: $blue;
-$primary-inverse : $grey;
-$secondary: $yellow;
-$secondary-inverse: $orange;
-$tertiary : $pink;
-$tertiary-inverse : $blue-night;
-
+$primary-inverse:$yellow;
+$secondary:$red;
+$secondaire-inverse:$white;
+$tertiary: $blue-night;
+$tertiary-inverse: $orange;
 
 
 
@@ -24,6 +23,4 @@ $theme-colors: (
     "secondary-inverse": $secondary-inverse,
     "tertiary": $tertiary,
     "tertiary-inverse": $tertiary-inverse,
-
-
 );
